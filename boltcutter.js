@@ -1,5 +1,3 @@
-let express = require("express");
-let app = express();
 const Eris = require("eris");
 const config = require("./config.json");
 let bot = new Eris.CommandClient(
@@ -41,8 +39,4 @@ bot.registerCommand(
     usage: "<text>"
   }
 );
-
-app.use(express.static(__dirname + "/public"));
-app.listen(process.env.PORT || 4000);
-
 bot.connect();
