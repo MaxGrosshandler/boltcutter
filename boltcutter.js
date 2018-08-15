@@ -1,13 +1,14 @@
 let express = require("express");
 let app = express();
 const Eris = require("eris");
+const config = require("./config.json");
 let bot = new Eris.CommandClient(
-  "YOURTOKENHERE", //replace with your bot's token
+  config.token, //replace with your bot's token
   {},
   {
     description: "A test bot made in Eris following the Boltcutter ideals",
     owner: "somebody",
-    prefix: "!"
+    prefix: "bolt "
   }
 );
 
